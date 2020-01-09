@@ -8,8 +8,6 @@ services:
       - ./frontend:/usr/src/app/
     ports:
       - '3000:3000'
-    env_file:
-      - ./frontend/env/.env.dev
     command: 'yarn dev'
 
   backend:

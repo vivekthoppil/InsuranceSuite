@@ -1,4 +1,4 @@
-const PUBLIC_URLS = ['/signin','/signin/', '/signup', '/signup/']
+const PUBLIC_URLS = ['/signin', '/signin/', '/signup', '/signup/']
 
 export default function(context) {
   if (PUBLIC_URLS.includes(context.route.path)) {
