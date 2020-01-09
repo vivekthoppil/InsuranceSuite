@@ -24,3 +24,18 @@ Insurance Suite is a wannabe configurable risk management system capable of deal
      1. `suite_api`- The rest api framework powered by a gunicorn server.
      2. `suite_db`- The PostgreSQL db container which has a backing volume for data persistence.
      3. `suite_nginx`- The nginx container which will act as a reverse proxy to the api gunicorn server.
+
+## Frontend
+
+##### Technologies used
+
+ - Vue.js.
+ - Nuxt.js.
+ - Nginx ( For deploying the built dist folder ).
+ - Docker.
+ - Docker Compose.
+
+##### Design decisions
+
+ - The frontend is deployed using docker-compose orchestration. The production deployment will contain a `suite_frontend` container running in a network named `suite_frontend_network`.
+ - The configurable values are supplied as environment variables.
