@@ -11,11 +11,11 @@ Insurance Suite is a wannabe configurable risk management system capable of deal
  - Django ReST Framework.
  - PostgreSQL.
  - Swagger ( API Documentation using `drf-yasg` ).
- - NGINX ( As a reverse proxy and to serve static files in production environment ).
+ - Nginx ( As a reverse proxy and to serve static files in production environment ).
  - Gunicorn.
  - JWT ( Authentication using `python-jose`).
- - DOCKER
- - DOCKER-COMPOSE
+ - Docker.
+ - Docker Compose.
 
 ##### Design decisions
 
