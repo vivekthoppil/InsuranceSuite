@@ -1,0 +1,49 @@
+version: '3.3'
+
+services:
+  suite_api:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: suite_api
+    restart: always
+    command: gunicorn api.wsgi:application --bind 0.0.0.0:8000
+    expose:
+      - 8000
+    env_file:
+      - ./env/.env.prod
+    networks:
+      - api_network
+    volumes:
+      - static_volume:/home/app/suite/api/staticfiles
+    depends_on:
+      - db
+  db:
+    image: postgres:12.0-alpine
+    container_name: suite_db
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./env/.env.prod.db
+    networks: 
+      - api_network
+
+  nginx:
+    build: ./nginx
+    container_name: suite_nginx
+    volumes:
+      - static_volume:/home/app/suite/api/staticfiles
+    ports:
+      - 8080:8080
+    networks:
+      - api_network
+    depends_on:
+      - suite_api
+
+networks:
+  api_network:
+
+volumes:
+  postgres_data:
+  static_volume:

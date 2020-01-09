@@ -1,0 +1,21 @@
+version: '3.3'
+
+services:
+  suite_frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: suite_frontend
+    restart: always
+    ports:
+      - 80:80
+    networks:
+      - suite_frontend_network
+    volumes:
+      - static_volume:/usr/share/nginx/html/suite_frontend
+
+networks:
+  suite_frontend_network:
+
+volumes:
+  static_volume:

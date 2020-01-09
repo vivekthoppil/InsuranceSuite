@@ -1,0 +1,38 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+autopep8 = "*"
+
+[packages]
+djangorestframework = "==3.10.3"
+ecdsa = "==0.14.1"
+entrypoints = "==0.3"
+future = "==0.18.2"
+mccabe = "==0.6.1"
+pudb = "==2019.1"
+pyasn1 = "==0.4.8"
+pycodestyle = "==2.5.0"
+pyflakes = "==2.1.1"
+python-jose = "==3.0.1"
+pytz = "==2019.3"
+rsa = "==4.0"
+six = "==1.13.0"
+sqlparse = "==0.3.0"
+urwid = "==2.0.1"
+whitenoise = "==4.1.4"
+psycopg2-binary = "==2.8.3"
+gunicorn = "==19.9.0"
+drf-yasg = "==1.17.0"
+Django = "==2.2.7"
+Pygments = "==2.4.2"
+django-extensions = "*"
+pygraphviz = "*"
+django-cors-headers = "*"
+zappa = "*"
+
+[requires]
+python_version = "3.6"
