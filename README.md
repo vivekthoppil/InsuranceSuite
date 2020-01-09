@@ -70,3 +70,8 @@ The production deployment treats  both frontend and backend as separate projects
     ```
 
  - Backend should be available at `http://0.0.0.0:8080` and frontend should be available at `http://0.0.0.0`.
+ 
+ **IMPORTANT** 
+
+ - The CORS and ALLOWED_HOSTS properties for backend are added in `/backend/env/.env.prod` or `/backend/env/.env.dev` for production or development respectively.
+ - The `API_BASE_URL` property for frontend is added in `/backend/.env.prod` or `/backend/.env` for production or development respectively.
