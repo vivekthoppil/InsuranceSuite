@@ -39,3 +39,14 @@ Insurance Suite is a wannabe configurable risk management system capable of deal
 
  - The frontend is deployed using docker-compose orchestration. The production deployment will contain a `suite_frontend` container running in a network named `suite_frontend_network`.
  - The configurable values are supplied as environment variables.
+ 
+ ## Running the project
+
+> Make sure `docker` and `docker-compose` are installed in the system.
+
+##### Development.
+The development environment deploys both frontend and backend projects as a single stack. Backend uses a python development server ( port 8000 ) and frontend uses a node development server ( port 3000 ).
+
+ - Make sure there is a `/backend/env/.env.dev` file . If not, create one based on `/backend/env/.env.dev.sample` with correct values.
+ - From the project root folder , run `docker-compose up -d --build`.
+ - Backend should be available at `http://0.0.0.0:8000` and frontend should be avilable at `http://0.0.0.0:3000`
