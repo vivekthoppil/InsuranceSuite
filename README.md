@@ -78,6 +78,13 @@ The production deployment treats  both frontend and backend as separate projects
  - The CORS and ALLOWED_HOSTS properties for backend are added in `/backend/env/.env.prod` or `/backend/env/.env.dev` for production or development respectively.
  - The `API_BASE_URL` property for frontend is added in `/backend/.env.prod` or `/backend/.env` for production or development respectively.
  
+ ## Deliverables
+
+ - [ORM classes](https://github.com/vivekthoppil/InsuranceSuite/blob/master/backend/api/apps/suite/models.py)
+ - [Entity Relationship Diagram](https://github.com/vivekthoppil/InsuranceSuite/blob/master/backend/ERD/erd.png)
+ - Backend API Deployed URL: http://ec2-13-235-95-53.ap-south-1.compute.amazonaws.com:8080
+ - Frontend Deployed URL:  http://ec2-13-235-95-53.ap-south-1.compute.amazonaws.com
+
  # Future Roadmap
 
  - Add Docker swarm or kubernetes orchestration.
