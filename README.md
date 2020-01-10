@@ -24,6 +24,8 @@ Insurance Suite is a wannabe configurable risk management system capable of deal
      1. `suite_api`- The rest api framework powered by a gunicorn server.
      2. `suite_db`- The PostgreSQL db container which has a backing volume for data persistence.
      3. `suite_nginx`- The nginx container which will act as a reverse proxy to the api gunicorn server.
+     
+ - API tests are provided.
 
 ## Frontend
 
