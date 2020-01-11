@@ -33,6 +33,7 @@ Insurance Suite is a wannabe configurable risk management system capable of deal
 
  - Vue.js.
  - Nuxt.js.
+ - Vuetify
  - Nginx ( For deploying the built dist folder ).
  - Docker.
  - Docker Compose.
